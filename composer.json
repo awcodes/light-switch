@@ -1,0 +1,70 @@
+{
+    "name": "awcodes/light-switch",
+    "description": "Plugin to add theme switching (light/dark/system) to the auth pages for Filament Panels",
+    "keywords": [
+        "awcodes",
+        "laravel",
+        "light-switch",
+        "filament",
+        "filament-plugin"
+    ],
+    "homepage": "https://github.com/awcodes/light-switch",
+    "support": {
+        "issues": "https://github.com/awcodes/light-switch/issues",
+        "source": "https://github.com/awcodes/light-switch"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adam Weston",
+            "email": "awcodes1@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "filament/filament": "^3.0",
+        "spatie/laravel-package-tools": "^1.15.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.0",
+        "nunomaduro/collision": "^7.9",
+        "orchestra/testbench": "^8.0",
+        "pestphp/pest": "^2.0",
+        "pestphp/pest-plugin-arch": "^2.0",
+        "pestphp/pest-plugin-laravel": "^2.0",
+        "spatie/laravel-ray": "^1.26"
+    },
+    "autoload": {
+        "psr-4": {
+            "Awcodes\\LightSwitch\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Awcodes\\LightSwitch\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Awcodes\\LightSwitch\\LightSwitchServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
