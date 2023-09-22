@@ -54,8 +54,9 @@ public function panel(Panel $panel): Panel
 Alignment::TopLeft
 Alignment::TopCenter
 Alignment::TopRight
-Alignment::MiddleLeft
-Alignment::MiddleCenter
+Alignment::BottomLeft
+Alignment::BottomCenter
+Alignment::BottomRight
 ```
 
 ### Disabling on specific pages
