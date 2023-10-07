@@ -64,7 +64,6 @@ class LightSwitchPlugin implements Plugin
     public function shouldShowSwitcher(): bool
     {
         return Str::of(request()->route()->getName())->contains($this->enabledOn ?? [
-            'auth.email',
             'auth.login',
             'auth.password',
             'auth.profile',
