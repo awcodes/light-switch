@@ -9,7 +9,7 @@
     $plugin->shouldShowSwitcher()
 )
     <div @class([
-        'auth-theme-switcher fixed w-full flex p-4 z-50',
+        'auth-theme-switcher fixed w-full flex p-4 z-40',
         'top-0' => str_contains($alignment, 'top'),
         'bottom-0' => str_contains($alignment, 'bottom'),
         'justify-start' => str_contains($alignment, 'left'),
