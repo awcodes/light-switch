@@ -24,7 +24,7 @@
                     init: function () {
                         this.theme = localStorage.getItem('theme') || 'system'
 
-                        $dispatch('theme-changed', theme)
+                        $dispatch('theme-changed', this.theme)
 
                         $watch('theme', (theme) => {
                             $dispatch('theme-changed', theme)
