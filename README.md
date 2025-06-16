@@ -1,15 +1,17 @@
+![light switch screenshots](https://res.cloudinary.com/aw-codes/image/upload/w_1200,f_auto,q_auto/plugins/light-switch/awcodes-light-switch.jpg)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/awcodes/light-switch.svg?style=flat-square)](https://packagist.org/packages/awcodes/light-switch)
+[![Total Downloads](https://img.shields.io/packagist/dt/awcodes/light-switch.svg?style=flat-square)](https://packagist.org/packages/awcodes/light-switch)
+
 # Light Switch 
 
 Plugin to add theme switching (light/dark/system) to the auth pages for Filament Panels
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/awcodes/light-switch.svg?style=flat-square)](https://packagist.org/packages/awcodes/light-switch)
-[![Total Downloads](https://img.shields.io/packagist/dt/awcodes/light-switch.svg?style=flat-square)](https://packagist.org/packages/awcodes/light-switch)
+## Compatibility
 
-![light switch screenshots](https://res.cloudinary.com/aw-codes/image/upload/w_1200,f_auto,q_auto/plugins/light-switch/awcodes-light-switch.jpg)
-
-## Requirements
-
-* Filament v3
+| Package Version | Filament Version |
+|-----------------|------------------|
+| 1.x             | 3.x              |
+| 2.x             | 4.x              |
 
 ## Installation
 
@@ -17,6 +19,15 @@ You can install the package via composer:
 
 ```bash
 composer require awcodes/light-switch
+```
+
+> [!IMPORTANT]
+> If you have not set up a custom theme and are using Filament Panels follow the instructions in the [Filament Docs](https://filamentphp.com/docs/4.x/styling/overview#creating-a-custom-theme) first.
+
+After setting up a custom theme add the plugin's views to your theme css file or your app's css file if using the standalone packages.
+
+```css
+@source '../../../../vendor/awcodes/light-switch/resources/**/*.blade.php';
 ```
 
 ## Usage
@@ -49,14 +60,6 @@ public function panel(Panel $panel): Panel
                 ->position(Alignment::BottomCenter),
         ]);
 }
-
-// Available positions
-Alignment::TopLeft
-Alignment::TopCenter
-Alignment::TopRight
-Alignment::BottomLeft
-Alignment::BottomCenter
-Alignment::BottomRight
 ```
 
 ### Disabling on specific pages

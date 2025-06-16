@@ -1,5 +1,7 @@
 <?php
 
-use Awcodes\LightSwitch\Tests\TestCase;
+declare(strict_types=1);
 
-uses(TestCase::class)->in(__DIR__);
+pest()
+    ->extend(Awcodes\LightSwitch\Tests\TestCase::class)
+    ->in('src/Feature', 'src/Unit');
