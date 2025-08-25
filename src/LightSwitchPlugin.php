@@ -70,7 +70,6 @@ class LightSwitchPlugin implements Plugin
         return Str::of(request()->route()->getName())->contains($this->isEnabledOn() ?? [
             'auth.login',
             'auth.password',
-            'auth.profile',
             'auth.register',
         ]);
     }
