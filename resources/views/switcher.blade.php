@@ -22,7 +22,7 @@
                     theme: null,
 
                     init: function () {
-                        this.theme = localStorage.getItem('theme') || 'system'
+                        this.theme = localStorage.getItem('theme') || @js(filament()->getDefaultThemeMode()->value)
 
                         $dispatch('theme-changed', theme)
 
