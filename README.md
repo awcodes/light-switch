@@ -11,7 +11,7 @@ Plugin to add theme switching (light/dark/system) to the auth pages for Filament
 | Package Version | Filament Version |
 |-----------------|------------------|
 | 1.x             | 3.x              |
-| 2.x             | 4.x              |
+| 2.x             | 4.x, 5.x         |
 
 ## Installation
 
