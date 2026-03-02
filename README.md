@@ -1,10 +1,11 @@
-![light switch screenshots](https://res.cloudinary.com/aw-codes/image/upload/w_1200,f_auto,q_auto/plugins/light-switch/awcodes-light-switch.jpg)
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/awcodes/light-switch.svg?style=flat-square)](https://packagist.org/packages/awcodes/light-switch)
-[![Total Downloads](https://img.shields.io/packagist/dt/awcodes/light-switch.svg?style=flat-square)](https://packagist.org/packages/awcodes/light-switch)
-
 # Light Switch 
 
 Plugin to add theme switching (light/dark/system) to the auth pages for Filament Panels
+
+[![Latest Version](https://img.shields.io/github/release/awcodes/light-switch.svg?style=flat-square)](https://github.com/awcodes/light-switch/releases)
+[![MIT Licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+[![Total Downloads](https://img.shields.io/packagist/dt/awcodes/light-switch.svg?style=flat-square)](https://packagist.org/packages/awcodes/light-switch)
+![GitHub Repo stars](https://img.shields.io/github/stars/awcodes/light-switch?style=flat-square)
 
 ## Compatibility
 
