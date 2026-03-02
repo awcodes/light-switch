@@ -2,10 +2,10 @@
 
 Plugin to add theme switching (light/dark/system) to the auth pages for Filament Panels
 
-[![Latest Version](https://img.shields.io/github/release/awcodes/light-switch.svg?style=flat-square)](https://github.com/awcodes/light-switch/releases)
-[![MIT Licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Total Downloads](https://img.shields.io/packagist/dt/awcodes/light-switch.svg?style=flat-square)](https://packagist.org/packages/awcodes/light-switch)
-![GitHub Repo stars](https://img.shields.io/github/stars/awcodes/light-switch?style=flat-square)
+[![Latest Version](https://img.shields.io/github/release/awcodes/light-switch.svg?style=flat-square&color=blue&label=Release)](https://github.com/awcodes/light-switch/releases)
+[![MIT Licensed](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE.md)
+[![Total Downloads](https://img.shields.io/packagist/dt/awcodes/light-switch.svg?style=flat-square&color=blue&label=Downloads)](https://packagist.org/packages/awcodes/light-switch)
+[![GitHub Repo stars](https://img.shields.io/github/stars/awcodes/light-switch?style=flat-square&color=blue&label=Stars)](https://github.com/awcodes/light-switch/stargazers)
 
 ## Compatibility
 
