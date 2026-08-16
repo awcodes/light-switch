@@ -66,9 +66,11 @@ public function panel(Panel $panel): Panel
 }
 ```
 
-### Disabling on specific pages
+### Choosing which pages show the switcher
 
-You can disable the switcher on specific pages by passing an array of route strings to the `on()` method. Anything in this array will get evaluated as should be shown. Otherwise, it will be enabled on all auth pages available to your panel.
+You can control which pages show the switcher by passing an array of route strings to the `enabledOn()` method. Anything in this array will get evaluated as should be shown. This replaces the default list rather than adding to it, so include every route you want.
+
+By default the switcher is shown on routes containing `auth.login`, `auth.password` or `auth.register`.
 
 When determining if the switcher should be shown the `Str::contains()` method is used to match the route name, so you can pass a partial route string to match multiple pages and not have to pass the complete route name. This is useful if you need to target routes containing a specific panel route, like `admin.auth.email` or `app.auth.email`.
 

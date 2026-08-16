@@ -1,0 +1,8 @@
+version: 1
+
+title: Light Switch
+
+navigation:
+  - index
+  - installation
+  - configuration
