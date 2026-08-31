@@ -1,0 +1,13 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Method Awcodes\\LightSwitch\\LightSwitchPlugin\:\:get\(\) should return static\(Awcodes\\LightSwitch\\LightSwitchPlugin\) but returns Filament\\Contracts\\Plugin\|Filament\\FilamentManager\.$#'
+			identifier: return.type
+			count: 1
+			path: src/LightSwitchPlugin.php
+
+		-
+			message: '#^Parameter \#1 \$view of function view expects view\-string\|null, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/LightSwitchPlugin.php
