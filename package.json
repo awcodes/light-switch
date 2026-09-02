@@ -1,0 +1,11 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build:workbench": "tailwindcss --input ./workbench/resources/css/theme.css --output ./workbench/public/css/filament/admin/theme.css --minify"
+    },
+    "devDependencies": {
+        "@tailwindcss/cli": "^4.1.0",
+        "tailwindcss": "^4.1.0"
+    }
+}

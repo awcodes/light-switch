@@ -103,6 +103,23 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
 
+### Development
+
+Install dependencies and run the test suite:
+
+```bash
+composer install
+composer test
+```
+
+Start the Workbench application:
+
+```bash
+composer serve
+```
+
+Open `/admin` and sign in with `test@example.com` / `password`. The login form is prefilled for convenience.
+
 ## Security Vulnerabilities
 
 Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
