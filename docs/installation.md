@@ -5,19 +5,15 @@ description: Install the package, register the plugin on a panel, and add the pl
 
 # Installation
 
-## Requirements
+## Compatibility
 
-- PHP 8.2 or higher
-- Filament 4.x or 5.x
-- A custom Filament theme
+| Filament version | Package version |
+|------------------|-----------------|
+| 3.x              | 1.x             |
+| 4.x              | 2.x             |
+| 4.x & 5.x        | 3.x             |
 
-Earlier releases support earlier versions of Filament:
-
-| Package Version | Filament Version |
-| --- | --- |
-| 1.x | 3.x |
-| 2.x | 4.x |
-| 3.x | 4.x & 5.x |
+Light Switch requires PHP 8.2 or later and `filament/filament`.
 
 ## Install the package
 
