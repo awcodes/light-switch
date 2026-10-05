@@ -16,7 +16,7 @@
         'justify-end' => str_contains($alignment, 'right'),
         'justify-center' => str_contains($alignment, 'center'),
     ])>
-        <div class="rounded-lg bg-gray-50 dark:bg-gray-950">
+        <div class="rounded-lg bg-gray-50 dark:bg-gray-950" data-focus="light-switch">
             <div
                 x-data="{
                     theme: null,
