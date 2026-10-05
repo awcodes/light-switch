@@ -39,14 +39,14 @@ return ScreenshotSuite::make()
             ->viewport(),
 
         // The share-image source. The two-up templates show it dark in slot 1 and light in slot 2, so it is
-        // captured in both themes. Slot 1 covers the right of slot 2, so the card uses the bottom-centre panel,
-        // where the switcher stays visible in both slots.
+        // captured in both themes. Slot 1 sits in front of the lower-left of slot 2, so the card uses the
+        // bottom-centre panel, where the switcher stays visible in both slots.
         Screenshot::make('card-login')
             ->viewportSize(...$cardSlot)
             ->visit('/guest/login')
             ->viewport(),
     ])
-    ->cardTemplates('https://github.com/awcodes/focus-templates/tree/v1.1.1/dist')
+    ->cardTemplates('https://github.com/awcodes/focus-templates/tree/v2.0.0/dist')
     ->cards([
         // Open Graph and the GitHub social preview share one 2400x1260 template; GitHub crops 30px top and bottom.
         Card::make('social')
