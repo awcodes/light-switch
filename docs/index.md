@@ -9,6 +9,14 @@ Filament's theme switcher lives inside the panel's user menu, which is only reac
 
 The switcher is a small floating control with three options — light, dark, and system — that writes the chosen theme to the same storage Filament itself uses. A visitor's choice therefore carries straight through to the panel after they sign in.
 
+![A Filament login page with the Light Switch theme switcher in the top right corner, light theme selected](assets/login-light.png#gh-light-mode-only)
+![A Filament login page with the Light Switch theme switcher in the top right corner, dark theme selected](assets/login-dark.png#gh-dark-mode-only)
+
+The active option is highlighted, so the control always shows which theme is in use:
+
+![The theme switcher's light, dark, and system buttons, with light selected](assets/switcher-light.png#gh-light-mode-only)
+![The theme switcher's light, dark, and system buttons, with dark selected](assets/switcher-dark.png#gh-dark-mode-only)
+
 ## What it does
 
 Registering the plugin adds a render hook to the panel that draws the switcher on the authentication pages. There is nothing to place in a view and no component to call.

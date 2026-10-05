@@ -38,6 +38,11 @@ public function panel(Panel $panel): Panel
 
 The switcher is positioned fixed against the viewport with a small inset, so it stays in place as the page scrolls.
 
+With `Alignment::BottomCenter`, the switcher sits below the form, here on the registration page:
+
+![A Filament registration page with the theme switcher centered at the bottom of the viewport, light theme selected](assets/position-bottom-center-light.png#gh-light-mode-only)
+![A Filament registration page with the theme switcher centered at the bottom of the viewport, dark theme selected](assets/position-bottom-center-dark.png#gh-dark-mode-only)
+
 ## Which pages show the switcher
 
 By default the switcher appears on routes whose name contains any of:
