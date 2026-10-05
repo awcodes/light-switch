@@ -46,7 +46,7 @@ return ScreenshotSuite::make()
             ->visit('/guest/login')
             ->viewport(),
     ])
-    ->cardTemplates('https://github.com/awcodes/focus-templates/tree/v1.1.0/dist')
+    ->cardTemplates('https://github.com/awcodes/focus-templates/tree/v1.1.1/dist')
     ->cards([
         // Open Graph and the GitHub social preview share one 2400x1260 template; GitHub crops 30px top and bottom.
         Card::make('social')
