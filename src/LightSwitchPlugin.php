@@ -37,12 +37,12 @@ class LightSwitchPlugin implements Plugin
         // The switcher sits in the simple layout's flow, above or below the page, so a tall form can't scroll under it.
         $panel->renderHook(
             name: PanelsRenderHook::SIMPLE_LAYOUT_START,
-            hook: fn (): ?View => $this->getPosition()->isTop() ? view('light-switch::switcher') : null
+            hook: fn (): ?View => $this->getPosition()->isTop() ? $this->renderSwitcher() : null
         );
 
         $panel->renderHook(
             name: PanelsRenderHook::SIMPLE_LAYOUT_END,
-            hook: fn (): ?View => $this->getPosition()->isTop() ? null : view('light-switch::switcher')
+            hook: fn (): ?View => $this->getPosition()->isTop() ? null : $this->renderSwitcher()
         );
     }
 
@@ -79,5 +79,10 @@ class LightSwitchPlugin implements Plugin
             'auth.password',
             'auth.register',
         ]);
+    }
+
+    protected function renderSwitcher(): View
+    {
+        return view('light-switch::switcher');
     }
 }
