@@ -9,14 +9,12 @@
     $plugin->shouldShowSwitcher()
 )
     <div @class([
-        'fixed w-full flex p-4 z-40 auth-theme-switcher',
-        'top-0' => str_contains($alignment, 'top'),
-        'bottom-0' => str_contains($alignment, 'bottom'),
+        'flex w-full p-4 auth-theme-switcher',
         'justify-start' => str_contains($alignment, 'left'),
         'justify-end' => str_contains($alignment, 'right'),
         'justify-center' => str_contains($alignment, 'center'),
     ])>
-        <div class="rounded-lg bg-gray-50 dark:bg-gray-950" data-focus="light-switch">
+        <div class="rounded-lg bg-white p-1 shadow-sm ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10" data-focus="light-switch">
             <div
                 x-data="{
                     theme: null,

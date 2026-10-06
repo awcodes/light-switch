@@ -35,7 +35,19 @@ it('hides the light switch', function () {
         ->assertDontSee('auth-theme-switcher');
 });
 
-it('displays in correct position', function () {
+it('displays above the page for top positions', function () {
+    $this->panel
+        ->plugins([
+            LightSwitchPlugin::make()
+                ->position(Alignment::TopRight),
+        ]);
+
+    $this->get('/admin/login')
+        ->assertOk()
+        ->assertSeeInOrder(['auth-theme-switcher justify-end', 'id="fi-main-content"'], escape: false);
+});
+
+it('displays below the page for bottom positions', function () {
     $this->panel
         ->plugins([
             LightSwitchPlugin::make()
@@ -44,6 +56,15 @@ it('displays in correct position', function () {
 
     $this->get('/admin/login')
         ->assertOk()
-        ->assertSee('auth-theme-switcher bottom-0 justify-start')
-        ->assertDontSee('auth-theme-switcher top-0 justify-end');
+        ->assertSeeInOrder(['id="fi-main-content"', 'auth-theme-switcher justify-start'], escape: false);
 });
+
+it('renders the switcher once', function (Alignment $position) {
+    $this->panel
+        ->plugins([
+            LightSwitchPlugin::make()
+                ->position($position),
+        ]);
+
+    expect(substr_count($this->get('/admin/login')->getContent(), 'auth-theme-switcher'))->toBe(1);
+})->with([Alignment::TopCenter, Alignment::BottomCenter]);
