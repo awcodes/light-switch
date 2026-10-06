@@ -7,7 +7,7 @@ description: Add a light, dark, and system theme switcher to the authentication 
 
 Filament's theme switcher lives inside the panel's user menu, which is only reachable once someone has signed in. Light Switch adds one to the authentication pages, so a visitor can change the theme before they log in.
 
-The switcher is a small floating control with three options — light, dark, and system — that writes the chosen theme to the same storage Filament itself uses. A visitor's choice therefore carries straight through to the panel after they sign in.
+The switcher is a small control with three options — light, dark, and system — that writes the chosen theme to the same storage Filament itself uses. A visitor's choice therefore carries straight through to the panel after they sign in.
 
 ![A Filament login page with the Light Switch theme switcher in the top right corner, light theme selected](assets/login-light.png#gh-light-mode-only)
 ![A Filament login page with the Light Switch theme switcher in the top right corner, dark theme selected](assets/login-dark.png#gh-dark-mode-only)

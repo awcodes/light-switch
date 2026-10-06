@@ -32,18 +32,19 @@ return ScreenshotSuite::make()
             ->padding(16),
 
         // The Workbench's second panel moves the switcher with position(Alignment::BottomCenter). The registration
-        // form is taller than the login form, so the viewport is taller to keep the switcher clear of the card.
+        // form is taller than the login form, so the viewport is taller to keep the switcher below it in frame.
         Screenshot::make('position-bottom-center')
             ->viewportSize(1280, 800)
             ->visit('/guest/register')
             ->viewport(),
 
         // The share-image source. The two-up templates show it dark in slot 1 and light in slot 2, so it is
-        // captured in both themes. Slot 1 sits in front of the lower-left of slot 2, so the card uses the
-        // bottom-centre panel, where the switcher stays visible in both slots.
+        // captured in both themes. Slot 1 sits in front of the lower-left of slot 2, so the card uses the default
+        // top-right position, where the switcher stays visible in both slots. A bottom position would sit below
+        // the form, out of frame at this size.
         Screenshot::make('card-login')
             ->viewportSize(...$cardSlot)
-            ->visit('/guest/login')
+            ->visit('/admin/login')
             ->viewport(),
     ])
     ->cardTemplates('https://github.com/awcodes/focus-templates/tree/v2.1.0/dist')

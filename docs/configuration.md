@@ -36,7 +36,10 @@ public function panel(Panel $panel): Panel
 | `Alignment::BottomCenter` | Bottom center |
 | `Alignment::BottomRight` | Bottom right |
 
-The switcher is positioned fixed against the viewport with a small inset, so it stays in place as the page scrolls.
+The switcher is part of the page layout rather than fixed over it. It sits at the top or bottom edge of the viewport when there is room. On a short screen it moves above or below the form, so it never covers a field or button.
+
+> [!NOTE]
+> The switcher renders in the layout Filament uses for its authentication pages, the simple layout. A route listed in `enabledOn()` that uses the full panel layout, such as a profile page that isn't simple, doesn't show it. Those pages already have Filament's own theme switcher in the user menu.
 
 With `Alignment::BottomCenter`, the switcher sits below the form, here on the registration page:
 
