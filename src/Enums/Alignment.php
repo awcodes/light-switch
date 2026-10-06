@@ -17,4 +17,9 @@ enum Alignment: string
     case BottomCenter = 'bottom-center';
 
     case BottomRight = 'bottom-right';
+
+    public function isTop(): bool
+    {
+        return str_starts_with($this->value, 'top');
+    }
 }

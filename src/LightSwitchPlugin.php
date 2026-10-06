@@ -7,6 +7,7 @@ namespace Awcodes\LightSwitch;
 use Awcodes\LightSwitch\Enums\Alignment;
 use Filament\Contracts\Plugin;
 use Filament\Panel;
+use Filament\View\PanelsRenderHook;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Str;
 
@@ -33,9 +34,15 @@ class LightSwitchPlugin implements Plugin
 
     public function register(Panel $panel): void
     {
+        // The switcher sits in the simple layout's flow, above or below the page, so a tall form can't scroll under it.
         $panel->renderHook(
-            name: 'panels::body.end',
-            hook: fn (): View => view('light-switch::switcher')
+            name: PanelsRenderHook::SIMPLE_LAYOUT_START,
+            hook: fn (): ?View => $this->getPosition()->isTop() ? view('light-switch::switcher') : null
+        );
+
+        $panel->renderHook(
+            name: PanelsRenderHook::SIMPLE_LAYOUT_END,
+            hook: fn (): ?View => $this->getPosition()->isTop() ? null : view('light-switch::switcher')
         );
     }
 

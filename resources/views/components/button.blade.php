@@ -12,7 +12,7 @@
     type="button"
     x-bind:class="
         theme === @js($theme)
-            ? 'bg-gray-50 text-primary-500 dark:bg-white/5 dark:text-primary-400'
+            ? 'bg-gray-100 text-primary-600 dark:bg-white/10 dark:text-primary-400'
             : 'text-gray-400 hover:text-gray-500 focus:text-gray-500 dark:text-gray-500 dark:hover:text-gray-400 dark:focus:text-gray-400'
     "
     x-on:click="(theme = @js($theme))"
