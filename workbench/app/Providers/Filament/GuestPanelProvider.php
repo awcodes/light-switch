@@ -16,6 +16,7 @@ use Filament\PanelProvider;
 use Filament\Support\Assets\Theme;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
+use Illuminate\Foundation\Http\Middleware\PreventRequestForgery;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\StartSession;
@@ -48,7 +49,7 @@ class GuestPanelProvider extends PanelProvider
                 StartSession::class,
                 AuthenticateSession::class,
                 ShareErrorsFromSession::class,
-                VerifyCsrfToken::class,
+                $this->csrfMiddleware(),
                 SubstituteBindings::class,
                 DisableBladeIconComponents::class,
                 DispatchServingFilamentEvent::class,
@@ -56,5 +57,18 @@ class GuestPanelProvider extends PanelProvider
             ->authMiddleware([
                 Authenticate::class,
             ]);
+    }
+
+    /**
+     * @return class-string
+     */
+    private function csrfMiddleware(): string
+    {
+        // PreventRequestForgery replaced VerifyCsrfToken in Laravel 13. Laravel 12 rows
+        // in the CI matrix don't have it yet, so fall back there, as Filament's own panel
+        // generator does.
+        return class_exists(PreventRequestForgery::class)
+            ? PreventRequestForgery::class
+            : VerifyCsrfToken::class;
     }
 }
