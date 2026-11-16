@@ -5,7 +5,7 @@
         "build:workbench": "tailwindcss --input ./workbench/resources/css/theme.css --output ./workbench/public/css/filament/admin/theme.css --minify"
     },
     "devDependencies": {
-        "@tailwindcss/cli": "^4.1.0",
+        "@tailwindcss/cli": "^4.3.5",
         "tailwindcss": "^4.1.0"
     }
 }
